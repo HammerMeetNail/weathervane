@@ -38,6 +38,7 @@ if [ $# -gt 0 ]; then
 	eval "$* &"
 else
 	perl /configure.pl
+	ulimit -n 1048576
 	setsid /usr/sbin/nginx  &
 fi
 
